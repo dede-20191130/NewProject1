@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+    Index Page
+</title>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+</head>
+<body>
+<p>Hello Template!</p>
+<p>
+    <button type="button" onclick="MyFunction1()">Hello Template2!</button>
+
+</p>
+<p>Hello Template33!</p>
+
+<p>
+    {{ hour }}時{{ minite }}分です。<br>
+    {{ message }}
+</p>
+<p>
+    <a href="{% url 'hello:hello_if' %}">Move If Page</a>
+</p>
+<p>
+    <a href="{% url 'hello:hello_for' %}">Move For Page</a>
+</p>
+<p>
+    <a href="{% url 'hello:hello_get_query' %}">Get_query</a>
+</p>
+
+<script type="text/javascript">
+    function MyFunction1(){
+    alert(moment(new Date()).format("YYYY-MM-DD HH:mm:SS") )
+    }
+</script>
+</body>
+</html>
