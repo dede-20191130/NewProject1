@@ -1,0 +1,4 @@
+https://eiry.bitbucket.io/
+https://tutorial.djangogirls.org/ja/dynamic_data_in_templates/
+https://www.amazon.co.jp/%E7%8F%BE%E5%A0%B4%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B-Django-%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%E3%80%8A%E5%9F%BA%E7%A4%8E%E7%B7%A8%E3%80%8B-%E6%A8%AA%E7%80%AC-%E6%98%8E%E4%BB%81/dp/4802094744/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=django&qid=1568968406&s=gateway&sr=8-1
+https://djangobrothers.com/tutorials/memo_app/form/
