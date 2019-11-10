@@ -1,3 +1,6 @@
+import p20191110_1846
+
+
 class MyClass:
     def __init__(self, name):
         self.name = name
@@ -20,3 +23,4 @@ a.hello()  # => Hello
 a.world()  # => World
 print(a)
 print(myStr)
+p20191110_1846.MyClassB.funcAStatic()
