@@ -15,5 +15,5 @@ class MyClassC(MyClassA, MyClassB):
 
 
 a = MyClassC()
-a.funcA()  # MyClassA のメソッドもa
+a.funcA()  # MyClassA のメソッドもAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 a.funcB()  # MyClassB のメソッドも使用できる
