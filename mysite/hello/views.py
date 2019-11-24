@@ -1,3 +1,4 @@
+import random
 from datetime import datetime
 
 from django.shortcuts import render
@@ -14,17 +15,26 @@ def hello_template(request):
     d = {
         'hour': datetime.now().hour,
         'minite': datetime.now().minute,
-        'message': '指定文字列表示',
+        'message': '指定文字列表示：Python練習中',
     }
     return render(request, 'index.html', d)
 
 
 def hello_if(request):
+    randomBool = random.random() * 2 > 1
+
     d = {
-        'is_visible': True,
+        'is_visible': randomBool,
         'empty_str': 'イヴェルカーナFROST',
     }
     return render(request, 'if.html', d)
+
+
+# d = {
+#     'is_visible': True,
+#     'empty_str': 'イヴェルカーナFROST',
+# }
+# return render(request, 'if.html', d)
 
 
 def hello_for(request):

@@ -1,4 +1,7 @@
-import p20191110_1846
+from practice.tohoho import p20191110_1846
+
+
+# from . import p20191110_1846
 
 
 class MyClass:
@@ -9,7 +12,8 @@ class MyClass:
         print("Hello")
 
     def __str__(self):
-        return "My name is " + self.name
+        return "My name is " \
+               + self.name
 
 
 class MyClass2(MyClass):
