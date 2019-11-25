@@ -49,3 +49,26 @@ def hello_get_query(request):
         'your_name': request.GET.get('your_name')
     }
     return render(request, 'get_query.html', d)
+
+
+from . import forms
+
+
+def hello_forms(request):
+    form = forms.HelloForm(request.GET or None)
+    if form.is_valid():
+        message = 'データ検証に成功しました'
+    else:
+        message = 'データ検証に失敗しました'
+    d = {
+        'form': form,
+        'message': message,
+    }
+    return render(request, 'forms.html', d)
+
+
+def hello_forms2(request):
+    d = {
+        'form': forms.SampleForm(),
+    }
+    return render(request, 'form_samples.html', d)

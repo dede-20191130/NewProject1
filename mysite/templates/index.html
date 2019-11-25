@@ -21,18 +21,26 @@
     {{ message }}
 </p>
 <p>
+    <a href="{% url 'hello:hello_world' %}">Move hello_world Page</a><br>
+</p>
+<p>
     <a href="{% url 'hello:hello_if' %}">Move If Page</a>
 </p>
 <p>
     <a href="{% url 'hello:hello_for' %}">Move For Page</a>
 </p>
 <p>
-    <a href="{% url 'hello:hello_get_query' %}">Get_query</a>
+    <a href="{% url 'hello:hello_get_query' %}">Move Get_query Page</a>
 </p>
-
+<p>
+    <a href="{% url 'hello:hello_forms' %}">Move Form Page</a>
+</p>
+<p>
+    <a href="{% url 'hello:hello_forms2' %}">Move Form_Samples Page</a>
+</p>
 <script type="text/javascript">
-    function MyFunction1(){
-    alert(moment(new Date()).format("YYYY-MM-DD HH:mm:SS") )
+    function MyFunction1() {
+        alert(moment(new Date()).format("YYYY-MM-DD HH:mm:SS"))
     }
 </script>
 </body>
