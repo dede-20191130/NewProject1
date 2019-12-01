@@ -29,4 +29,3 @@ a = MyClassC()
 a.funcA()  # MyClassA のメソッドもAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 # a.funcB()  # MyClassB のメソッドも使用できる
 MyClassB.funcAStatic()
-# ok
