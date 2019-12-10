@@ -23,5 +23,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     url(r'^hello/', include(('hello.urls', 'hello'), )),
+    url(r'^crud/', include('crud.urls', namespace='crud')),
 
 ]
