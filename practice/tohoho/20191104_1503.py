@@ -9,7 +9,7 @@ def mydecolater(func):  # デコレータを定義する
 
 @mydecolater
 def hello():
-    print("hello")
+    print("helloWWW")
 
 
 hello()  # => start, hello, end
