@@ -32,13 +32,6 @@ def hello_if(request):
     return render(request, 'if.html', d)
 
 
-# d = {
-#     'is_visible': True,
-#     'empty_str': 'イヴェルカーナFROST',
-# }
-# return render(request, 'if.html', d)
-
-
 def hello_for(request):
     d = {
         'objects': range(10),

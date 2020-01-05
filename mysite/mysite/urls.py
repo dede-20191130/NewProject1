@@ -17,12 +17,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path, include
 from setuptools import namespaces
+from django.http import HttpResponse
+from django.shortcuts import render
 
 urlpatterns = [
-    path('', include('hello.urls', )),
+    path('', lambda res: render(None, r'root/root_page.html')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     url(r'^hello/', include(('hello.urls', 'hello'), )),
-    url(r'^crud/', include(('crud.urls', 'crud'),)),
+    url(r'^crud/', include(('crud.urls', 'crud'), )),
 
 ]
