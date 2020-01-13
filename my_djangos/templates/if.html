@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If Page</title>
+</head>
+<body>
+{% if is_visible %}
+    is_visibleがTrueなので時刻表示します。<br>
+    現在
+    <script type="text/javascript">
+        var date1 = new Date();
+        var str = date1.getHours() + "時" + date1.getMinutes() + "分";
+        document.write(str);
+    </script>
+    <br>
+{% else %}
+    is_visibleがFalseなので時刻表示しません。<br>
+{% endif %}
+
+{% if empty_str|length > 0 %}
+    empty_strの文字内容は{{ empty_str }}<br>
+    文字数は{{ empty_str|length }}です。
+{% else %}
+    empty_strが空です。<br>
+{% endif %}
+</body>
+</html>
