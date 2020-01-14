@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
 {% block body %}
-    edit
+    <a href="{% url 'crud:index' %}">一覧画面へ</a>
+    <form action="" method="post">
+        {{ form.errors.message }}
+        <label>{{ form.message.label }}{{ form.message }}</label><br/>
+        <label>
+            {{ form.type.label }}:
+            {% for one_of in form.type %}
+                {{ one_of }}
+            {% endfor %}
+        </label><br/>
+        {% csrf_token %}
+        <input type="submit" value="登録">
+    </form>
 {% endblock %}

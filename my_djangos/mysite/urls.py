@@ -19,7 +19,7 @@ from django.shortcuts import render
 from django.urls import path, include
 
 urlpatterns = [
-    path('', lambda res: render(None, r'root/root_page.html')),
+    path('', lambda res: render(None, r'root/root_page.html'), name='root_pageee'),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     url(r'^hello/', include(('hello.urls', 'hello'), )),
