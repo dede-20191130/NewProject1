@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <a href="{% url 'crud:add' %}">登録画面へ</a>{# 追加する #}
-    <form method="post" action="">
+    <script type="text/javascript">
+        <!--
+        document.write('<p>リンク元URL：' + document.referrer + '</p>');
+        // -->
+    </script>
+    {% if is_delete %}
+        <script type="text/javascript">
+            alert('削除しました');
+            location.href = "{% url 'crud:index' %}";
+        </script>
+    {% endif %}
+    <hr>
+    <a href="{% url 'crud:add' %}">登録画面へ</a>
+    <form method="post" action="{% url 'crud:delete' %}">
         <table border="1">
             <thead>
             <tr>
+                <th><span style="font-size: 4px">Delete</span></th>
                 <th>message</th>
                 <th>種類</th>
                 <th>created_at</th>
@@ -16,6 +29,7 @@
             <tbody>
             {% for message in messages %}
                 <tr>
+                    <td><input type="checkbox" name="delete_ids" value="{{ message.id }}"></td>
                     <td>{{ message.message }}</td>
                     <td>{{ message.type }}</td>
                     <td>{{ message.created_at }}</td>
@@ -25,5 +39,7 @@
             {% endfor %}
             </tbody>
         </table>
+        {% csrf_token %}
+        <input type="submit" value="削除">
     </form>
 {% endblock %}
