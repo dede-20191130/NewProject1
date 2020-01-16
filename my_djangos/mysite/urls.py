@@ -22,7 +22,9 @@ urlpatterns = [
     path('', lambda res: render(None, r'root/root_page.html'), name='root_pageee'),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    url(r'^hello/', include(('hello.urls', 'hello'), )),
+    # url(r'^hello/', include(('hello.urls', 'hello'), )),
+    url(r'^hello/', include('hello.urls')),
     url(r'^crud/', include(('crud.urls', 'crud'), )),
+    path(r'guestboard/', include('guestboard.urls')),
 
 ]

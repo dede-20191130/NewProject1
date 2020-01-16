@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 
+app_name = 'crud'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^after_delete/(?P<is_delete>[\w_]+)/$', views.index, name='index_after_delete'),
