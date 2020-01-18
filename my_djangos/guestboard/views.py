@@ -34,7 +34,7 @@ def index(request):
             # save()メソッドを呼ぶだけでModelを使ってDBに登録される。
             form.save()
             # メッセージフレームワークを使い、処理が成功したことをユーザーに通知する
-            messages.success(request, '投稿を受付ました。')
+            messages.success(request, '投稿を受付しました。')
             return redirect('guestboard:index')
         else:
             # メッセージフレームワークを使い、処理が失敗したことをユーザーに通知する
@@ -42,7 +42,7 @@ def index(request):
     page = _get_page(
         Posting.objects.order_by('-id'),  # 投稿を新しい順に並び替えて取得する
         request.GET.get('page'),  # GETクエリからページ番号を取得する
-        count=5
+        count=3
     )
     contexts = {
         'form': form,

@@ -9,5 +9,5 @@ class PostingForm(forms.ModelForm):
         fields = ('name', 'message')
         widgets = {
             'name': forms.TextInput(attrs={'size': 40, 'required': True}),
-            'message': forms.Textarea(attrs={'cols': 80, 'rows': 20, 'required': True})
+            'message': forms.Textarea(attrs={'cols': 80, 'rows': 20, 'required': False})
         }

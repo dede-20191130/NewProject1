@@ -29,3 +29,15 @@
     color: #F00;
     background-color: #fdd;
 }
+
+.text_change_color {
+    color: black !important;
+}
+
+.text_change_color * {
+    color: black !important;
+}
+
+/*textarea {*/
+/*    color: black !important;*/
+/*}*/
