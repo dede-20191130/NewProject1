@@ -26,6 +26,6 @@ class MyClassC(MyClassA, MyClassB):
 
 
 a = MyClassC()
-a.funcA()  # MyClassA のメソッドもAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+a.funcA()  # MyClassA のメソッドもAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 # a.funcB()  # MyClassB のメソッドも使用できる
 MyClassB.funcAStatic()
