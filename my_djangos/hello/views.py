@@ -27,7 +27,7 @@ def hello_if(request):
 
     d = {
         'is_visible': randomBool,
-        'empty_str': 'イヴェルカーナFROST',
+        'empty_str': 'なんとかAAA',
     }
     return render(request, 'if.html', d)
 
